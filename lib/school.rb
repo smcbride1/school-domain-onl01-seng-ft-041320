@@ -6,16 +6,16 @@ class School
   end
 
   def add_student(name, grade)
-    @roster["#{grade}"] = [] if @roster["#{grade}"] == nil
-    @roster["#{grade}"].push("#{name}")
+    @roster[grade] = [] if @roster[grade] == nil
+    @roster[grade].push("#{name}")
   end
 
-  def grade(grade_number)
-    @roster["#{grade_number}"]
+  def grade(grade)
+    @roster[grade]
   end
 
   def sort
-    @roster["#{grade_number}"].sort
+    @roster.each do |grade, names|
   end
 
 end
